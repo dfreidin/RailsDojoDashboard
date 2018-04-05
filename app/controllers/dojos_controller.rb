@@ -13,6 +13,7 @@ class DojosController < ApplicationController
   end
 
   def show
+    redirect_to dojo_students_url(params[:id])
   end
 
   def edit
@@ -20,7 +21,7 @@ class DojosController < ApplicationController
 
   def update
     @dojo.update(process_dojo_form)
-    redirect_to "/dojos/#{@dojo.id}"
+    redirect_to dojo_url(@dojo.id)
   end
 
   def destroy
