@@ -1,0 +1,21 @@
+<h1>Listing <%= Dojo.count %> Dojos</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Coding Dojo Branch</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% Dojo.all.each do |d| %>
+            <tr>
+                <td><%= d.branch %>
+                <td><%= d.street %>
+                <td><%= d.city %>
+                <td><%= d.state %>
+            </tr>
+        <% end %>
+    </tbody>
+<table>
